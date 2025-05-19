@@ -5,9 +5,11 @@ import Error from "./Error.jsx";
 const requestConfig = {}
 
 export default function Meals(){
+
+    const url = "https://food-order-app-backend-amy2.onrender.com"
     
      const {data : loadedMeals , isLoading , error} = 
-     useHttp("http://localhost:3000/meals" , requestConfig , []);
+     useHttp(url + "/meals" , requestConfig , []);
 
      console.log(loadedMeals);
     
